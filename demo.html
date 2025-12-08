@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Online - Legends of Eternity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <button class="btn btn-ghost" onclick="window.location.href='index.html'">
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"/>
+                    <polyline points="12 19 5 12 12 5"/>
+                </svg>
+                Voltar
+            </button>
+            <span class="header-title">Demo Online</span>
+            <button class="btn btn-outline" onclick="window.location.href='ranking.html'">
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                    <path d="M4 22h16"/>
+                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                </svg>
+                Ranking
+            </button>
+        </div>
+    </header>
+
+    <div class="container demo-container">
+        <div class="demo-layout">
+            <!-- Game Area -->
+            <div class="demo-main">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Zona de Batalha - Floresta Sombria</h3>
+                    </div>
+                    <div class="card-content">
+                        <!-- Game Canvas -->
+                        <div class="game-area">
+                            <div class="game-overlay"></div>
+                            <div class="game-info">
+                                <div class="game-emoji">⚔️</div>
+                                <p class="game-label">Área de Jogo - Demo Interativa</p>
+                                <p class="game-sublabel">Use os botões abaixo para interagir</p>
+                            </div>
+                            
+                            <!-- Enemy -->
+                            <div class="game-enemy">
+                                <div class="enemy-emoji">🐉</div>
+                                <div class="enemy-badge">
+                                    <p>Dragão Selvagem</p>
+                                </div>
+                            </div>
+
+                            <!-- Player -->
+                            <div class="game-player">
+                                <div class="player-emoji">🛡️</div>
+                                <div class="player-badge">
+                                    <p>Seu Herói</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Player Stats -->
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <svg class="stat-icon stat-icon-hp" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                    <span>HP</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill progress-hp" id="hpBar" style="width: 100%"></div>
+                                </div>
+                                <p class="stat-value"><span id="hpValue">100</span>/100</p>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <svg class="stat-icon stat-icon-mana" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                    </svg>
+                                    <span>Mana</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill progress-mana" id="manaBar" style="width: 80%"></div>
+                                </div>
+                                <p class="stat-value"><span id="manaValue">80</span>/100</p>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <svg class="stat-icon stat-icon-gold" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 6v12"/>
+                                        <path d="M15 9H9.5a2.5 2.5 0 0 0 0 5H12"/>
+                                        <path d="M9 15h5.5a2.5 2.5 0 0 1 0 5H12"/>
+                                    </svg>
+                                    <span>Ouro</span>
+                                </div>
+                                <p class="stat-value-large" id="goldValue">250</p>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <svg class="stat-icon stat-icon-xp" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                        <path d="M4 22h16"/>
+                                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                    </svg>
+                                    <span>XP</span>
+                                </div>
+                                <p class="stat-value-large" id="xpValue">450</p>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="action-buttons">
+                            <button class="btn btn-action btn-attack" onclick="attack()">⚔️ Atacar</button>
+                            <button class="btn btn-action btn-defend" onclick="defend()">🛡️ Defender</button>
+                            <button class="btn btn-action btn-special" id="specialBtn" onclick="special()">✨ Especial</button>
+                        </div>
+
+                        <p class="game-hint">
+                            Esta é uma demonstração interativa. Clique nos botões para testar as mecânicas do jogo!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Sidebar -->
+            <div class="demo-sidebar">
+                <div class="card chat-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Chat Global</h3>
+                    </div>
+                    <div class="card-content chat-content">
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="chat-message">
+                                <div class="chat-message-header">
+                                    <span class="chat-user">DragonSlayer</span>
+                                    <span class="chat-time">14:23</span>
+                                </div>
+                                <p class="chat-text">Alguém quer fazer a dungeon do Castelo Sombrio?</p>
+                            </div>
+                            <div class="chat-message">
+                                <div class="chat-message-header">
+                                    <span class="chat-user">MageSupreme</span>
+                                    <span class="chat-time">14:24</span>
+                                </div>
+                                <p class="chat-text">Eu vou! Sou level 45</p>
+                            </div>
+                            <div class="chat-message">
+                                <div class="chat-message-header">
+                                    <span class="chat-user">WarriorKing</span>
+                                    <span class="chat-time">14:25</span>
+                                </div>
+                                <p class="chat-text">Preciso de mais 100 XP pra subir de nível</p>
+                            </div>
+                            <div class="chat-message">
+                                <div class="chat-message-header">
+                                    <span class="chat-user">HealerPro</span>
+                                    <span class="chat-time">14:26</span>
+                                </div>
+                                <p class="chat-text">Posso curar o grupo!</p>
+                            </div>
+                        </div>
+
+                        <div class="chat-input-area">
+                            <input type="text" id="chatInput" class="chat-input" placeholder="Digite sua mensagem..." onkeypress="handleChatKeyPress(event)">
+                            <button class="btn btn-send" onclick="sendMessage()">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

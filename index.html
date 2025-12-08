@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legends of Eternity - RPG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <svg class="icon-sword" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.5 2H9.5L7 7l-4.5 4.5L5 14l3 3 2.5-2.5L14 11l6.5-6.5L17 1z"/>
+                    <path d="M5.5 14.5L1 19l4 4 4.5-4.5"/>
+                </svg>
+                <span class="logo-text">Legends of Eternity</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Início</a>
+                <a href="demo.html" class="nav-link">Jogar Demo</a>
+                <a href="ranking.html" class="nav-link">Ranking</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1759688168277-185a0c623968?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW50YXN5JTIwcnBnJTIwZ2FtZXxlbnwxfHx8fDE3NjQ4NDM1NjB8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Hero" class="hero-image">
+        <div class="container hero-content">
+            <h1 class="hero-title">Legends of Eternity</h1>
+            <p class="hero-description">
+                Embarque em uma jornada épica através de reinos místicos. Escolha seu destino, 
+                domine habilidades ancestrais e torne-se uma lenda imortal.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="downloadAPK()">
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Baixar APK
+                </button>
+                <button class="btn btn-secondary" onclick="window.location.href='demo.html'">
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                    Jogar Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Características do Jogo</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <svg class="feature-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.5 2H9.5L7 7l-4.5 4.5L5 14l3 3 2.5-2.5L14 11l6.5-6.5L17 1z"/>
+                    </svg>
+                    <h3 class="feature-title">Sistema de Combate Dinâmico</h3>
+                    <p class="feature-description">
+                        Domine combos devastadores e habilidades especiais em batalhas épicas em tempo real.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                    <h3 class="feature-title">Classes Únicas</h3>
+                    <p class="feature-description">
+                        Escolha entre 8 classes diferentes, cada uma com árvores de habilidades únicas e estilos de jogo distintos.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <h3 class="feature-title">Multiplayer Online</h3>
+                    <p class="feature-description">
+                        Una-se a outros jogadores em dungeons cooperativas ou prove seu valor em arenas PvP.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title">Capturas de Tela</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <img src="https://images.unsplash.com/photo-1553986782-9f6de60b51b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpZXZhbCUyMHdhcnJpb3IlMjBiYXR0bGV8ZW58MXx8fHwxNzY0ODc2MzA1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Batalha épica" class="screenshot-image">
+                </div>
+                <div class="screenshot-card">
+                    <img src="https://images.unsplash.com/photo-1594845222889-c20e5b48fb53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW50YXN5JTIwY2FzdGxlJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc2NDc2MzIzMXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Mundo expansivo" class="screenshot-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container cta-content">
+            <h2 class="cta-title">Pronto para a Aventura?</h2>
+            <p class="cta-description">
+                Baixe agora e receba recompensas exclusivas de pré-lançamento!
+            </p>
+            <button class="btn btn-primary btn-large" onclick="downloadAPK()">
+                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Baixar APK Grátis
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Legends of Eternity. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
