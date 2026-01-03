@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Legends of Eternity</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    </head>
+<body>
+     <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <svg class="icon-sword" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.5 2H9.5L7 7l-4.5 4.5L5 14l3 3 2.5-2.5L14 11l6.5-6.5L17 1z"/>
+                    <path d="M5.5 14.5L1 19l4 4 4.5-4.5"/>
+                </svg>
+                <span class="logo-text">Legends of Eternity</span>
+            </div>
+            <nav class="nav">
+                <a href="/index.html" class="nav-link active">Início</a>
+                <a href="/src/pages/demo.html" class="nav-link">Jogar Demo</a>
+                <a href="/src/pages/ranking.html" class="nav-link">Ranking</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="login-container">
+            <h1 class="login-title">Login</h1>
+            <form class="login-form" id="form-login">
+                <div class="form-group">
+                    <label for="nick">Nick</label>
+                    <input type="nick" id="nick" name="nick" placeholder="seu nick do jogo" required>
+                </div>
+                
+                <button type="submit" class="btn-entrar">Entrar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        © 2025 Legends of Eternity. Todos os direitos reservados.
+    </footer>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

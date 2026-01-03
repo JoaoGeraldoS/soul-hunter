@@ -1,0 +1,187 @@
+/* Importação de fonte, se necessário (usei Arial como fallback) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --color-dark-blue: #020617; /* Fundo principal escuro */
+    --color-card-blue: #13192B;
+    --color-header: rgba(15, 23, 42, 0.8) /* Fundo do container de login (um pouco mais claro que o principal) */
+    --color-text-light: #F0F0F0; /* Cor do texto claro */
+    --color-input-bg: #FFFFFF; /* Fundo do campo de input */
+    --color-button-blue: #007BFF; /* Azul do botão "Entrar" */
+    --color-button-hover: #0069D9; /* Azul mais escuro no hover */
+    --color-link: #8A8F9E; /* Cor dos links/texto secundário */
+    --color-logo-yellow: #FFC107; /* Amarelo/Laranja para destaque do logo */
+}
+
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+    color: var(--color-logo-yellow);
+    margin-right: 8px;
+}
+
+.nav a {
+    color: var(--color-link);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--color-text-light);
+}
+
+/* --- Conteúdo Principal (Centralização) --- */
+.main-content {
+    flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* --- Container de Login (O "Card" escuro) --- */
+.login-container {
+    background-color: var(--color-card-blue);
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px; /* Largura máxima do card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Para centralizar o "Esqueceu a senha?" */
+}
+
+.login-title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    font-weight: 400; /* Mais sutil, como na imagem */
+    color: var(--color-text-light);
+}
+
+/* --- Formulário --- */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os grupos de formulário */
+    margin-bottom: 15px;
+}
+
+.form-group {
+    text-align: left; /* Alinha o label à esquerda */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--color-link);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-input-bg);
+    color: #333; /* Cor do texto digitado no input */
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Placeholder personalizado (opcional, para combinar melhor com o fundo escuro) */
+.form-group input::placeholder {
+    color: #A0A0A0; /* Cor do texto de dica */
+}
+
+/* --- Botão --- */
+.btn-entrar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px; /* Espaço entre o último input e o botão */
+    background-color: var(--color-button-blue);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 700;
+}
+
+.btn-entrar:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* --- Link "Esqueceu a senha?" --- */
+.forgot-password {
+    display: inline-block;
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: var(--color-text-light);
+}
+
+/* --- Footer --- */
+.footer {
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-link);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: auto; /* Garante que fique no final */
+}
+
+/* --- Responsividade (Para dispositivos menores) --- */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+}

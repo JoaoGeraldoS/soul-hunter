@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking - Legends of Eternity</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <button class="btn btn-ghost" onclick="window.location.href='/index.html'">
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"/>
+                    <polyline points="12 19 5 12 12 5"/>
+                </svg>
+                Voltar
+            </button>
+            <span class="header-title">Ranking Global</span>
+            <button class="btn btn-outline" onclick="window.location.href='demo.html'">
+                Jogar Demo
+            </button>
+        </div>
+    </header>
+
+    <div class="container ranking-container">
+        <!-- Stats Cards -->
+        <div class="stats-cards">
+            <div class="stat-card-large stat-card-gold">
+                <div class="stat-card-large-content">
+                    <div>
+                        <p class="stat-card-label" >Total de Jogadores</p>
+                        <p class="stat-card-value" id="total_player"></p>
+                    </div>
+                    <svg class="stat-card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                        <path d="M4 22h16"/>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="stat-card-large stat-card-blue">
+                <div class="stat-card-large-content">
+                    <div>
+                        <p class="stat-card-label">Pontos Global</p>
+                        <p class="stat-card-value" id="total_pontos"></p>
+                    </div>
+                    <svg class="stat-card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.5 2H9.5L7 7l-4.5 4.5L5 14l3 3 2.5-2.5L14 11l6.5-6.5L17 1z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ranking Table -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <svg class="card-title-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                        <path d="M4 22h16"/>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                    </svg>
+                    Top 10 Jogadores
+                </h3>
+            </div>
+            <div class="card-content">
+                <div class="table-container">
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Jogador</th>
+                                <th>Level</th>
+                                <th>Classe</th>
+                                <th>Pontos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ranking-body">
+                         
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="season-info">
+                    <div class="season-header">
+                        <svg class="season-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        <span>Informações da Temporada</span>
+                    </div>
+                    <div class="season-details">
+                        <div>
+                            <p class="season-text">Temporada Atual: <span class="season-value">Temporada 3 - Era dos Dragões</span></p>
+                            <p class="season-text">Início: <span class="season-value">1 de Novembro, 2025</span></p>
+                        </div>
+                        <div>
+                            <p class="season-text">Termina em: <span class="season-value">30 dias</span></p>
+                            <p class="season-text">Recompensas: <span class="season-reward">Skin Exclusiva de Dragão</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+     <script src="../js/ranking.js"></script>
+</body>
+</html>
