@@ -1,0 +1,292 @@
+.game-area {
+    background: #020617;
+    border: 2px solid #334155;
+    border-radius: 0.5rem;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(6, 78, 59, 0.3), #020617);
+}
+
+.game-info {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.game-emoji {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.game-label {
+    color: #94a3b8;
+}
+
+.game-sublabel {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.game-enemy {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    text-align: center;
+}
+
+.enemy-emoji {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.enemy-badge {
+    background: rgba(127, 29, 29, 0.5);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+}
+
+.enemy-badge p {
+    color: #f87171;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.game-player {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    text-align: center;
+}
+
+.player-emoji {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.player-badge {
+    background: rgba(29, 78, 216, 0.5);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+}
+
+.player-badge p {
+    color: #60a5fa;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: #1e293b;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.stat-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #cbd5e1;
+}
+
+.stat-icon {
+    flex-shrink: 0;
+}
+
+.stat-icon-hp {
+    color: #ef4444;
+}
+
+.stat-icon-mana {
+    color: #3b82f6;
+}
+
+.stat-icon-gold {
+    color: #f59e0b;
+}
+
+.stat-icon-xp {
+    color: #a855f7;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #334155;
+    border-radius: 9999px;
+    height: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.3s;
+}
+
+.progress-hp {
+    background: #ef4444;
+}
+
+.progress-mana {
+    background: #3b82f6;
+}
+
+.stat-value {
+    color: white;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.stat-value-large {
+    color: white;
+    font-size: 1.25rem;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.btn-action {
+    color: white;
+    font-weight: 500;
+}
+
+.btn-attack {
+    background: #b91c1c;
+}
+
+.btn-attack:hover {
+    background: #991b1b;
+}
+
+.btn-defend {
+    background: #1d4ed8;
+}
+
+.btn-defend:hover {
+    background: #1e40af;
+}
+
+.btn-special {
+    background: #7e22ce;
+}
+
+.btn-special:hover {
+    background: #6b21a8;
+}
+
+.btn-special:disabled {
+    background: #4b5563;
+    cursor: not-allowed;
+}
+
+.game-hint {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+/* Chat */
+.chat-card {
+    height: calc(100vh - 12rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.chat-message {
+    background: #1e293b;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+.chat-message-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.chat-user {
+    color: #60a5fa;
+    font-size: 0.875rem;
+}
+
+.chat-user.own {
+    color: #f59e0b;
+}
+
+.chat-time {
+    color: #64748b;
+    font-size: 0.75rem;
+}
+
+.chat-text {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chat-input {
+    flex: 1;
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+}
+
+.chat-input::placeholder {
+    color: #64748b;
+}
+
+.chat-input:focus {
+    outline: none;
+    border-color: #d97706;
+}

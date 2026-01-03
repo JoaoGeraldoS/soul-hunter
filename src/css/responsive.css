@@ -1,0 +1,87 @@
+@media (max-width: 1024px) {
+    .demo-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .chat-card {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .demo-sidebar {
+        margin: 0 5px;
+    }
+
+    .demo-main {
+        margin: 0 5px;
+    }
+
+    .ranking-container {
+        margin: 0 5px;
+    }
+
+    .hero {
+        height: 350px;
+        
+    }
+    
+    .hero-description {
+        margin-top: 50px;
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        width: 100%;
+        padding: 0 10px;
+        justify-content: center;
+    }
+    
+    .features-grid,
+    .screenshots-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-toggle {
+        display: block; 
+    }
+
+    .nav {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background-color: #020617de;
+        padding: 20px;
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-10px);
+    }
+
+    .nav.active {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        padding: 12px 0;
+        border-bottom: 1px solid #1e293b;
+        width: 100%;
+    }
+    .login-container {
+        padding: 30px 20px;
+       
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+}

@@ -1,94 +1,27 @@
-// Global variables for game state
-let hp = 100;
-let mana = 80;
-let gold = 250;
-let experience = 450;
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
 
-// Download APK function
-function downloadAPK() {
-    alert('Download do APK iniciado! (Esta é uma demonstração)');
-}
+// Função para abrir/fechar o menu
+menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // Impede que o clique no botão se espalhe para o resto da tela
+    menuToggle.classList.toggle('open');
+    nav.classList.toggle('active');
+});
 
-// Game actions
-function attack() {
-    mana = Math.max(0, mana - 15);
-    experience += 25;
-    gold += 10;
-    updateStats();
-}
-
-function defend() {
-    hp = Math.min(100, hp + 10);
-    mana = Math.min(100, mana + 5);
-    updateStats();
-}
-
-function special() {
-    if (mana >= 30) {
-        mana -= 30;
-        experience += 50;
-        gold += 25;
-        updateStats();
+// Fecha o menu ao clicar em qualquer lugar da tela
+document.addEventListener('click', (e) => {
+    // Verifica se o menu está aberto E se o clique NÃO foi dentro do nav ou do botão
+    if (nav.classList.contains('active') && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
+        menuToggle.classList.remove('open');
+        nav.classList.remove('active');
     }
-}
+});
 
-// Update game stats display
-function updateStats() {
-    const hpBar = document.getElementById('hpBar');
-    const manaBar = document.getElementById('manaBar');
-    const hpValue = document.getElementById('hpValue');
-    const manaValue = document.getElementById('manaValue');
-    const goldValue = document.getElementById('goldValue');
-    const xpValue = document.getElementById('xpValue');
-    const specialBtn = document.getElementById('specialBtn');
-
-    if (hpBar) hpBar.style.width = hp + '%';
-    if (manaBar) manaBar.style.width = mana + '%';
-    if (hpValue) hpValue.textContent = hp;
-    if (manaValue) manaValue.textContent = mana;
-    if (goldValue) goldValue.textContent = gold;
-    if (xpValue) xpValue.textContent = experience;
-    
-    if (specialBtn) {
-        specialBtn.disabled = mana < 30;
-    }
-}
-
-// Chat functionality
-function sendMessage() {
-    const input = document.getElementById('chatInput');
-    const messagesContainer = document.getElementById('chatMessages');
-    
-    if (input && messagesContainer && input.value.trim()) {
-        const message = document.createElement('div');
-        message.className = 'chat-message';
-        
-        const now = new Date();
-        const time = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-        
-        message.innerHTML = `
-            <div class="chat-message-header">
-                <span class="chat-user own">Você</span>
-                <span class="chat-time">${time}</span>
-            </div>
-            <p class="chat-text">${input.value}</p>
-        `;
-        
-        messagesContainer.appendChild(message);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        
-        input.value = '';
-    }
-}
-
-function handleChatKeyPress(event) {
-    if (event.key === 'Enter') {
-        sendMessage();
-    }
-}
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-    // Update stats if on demo page
-    updateStats();
+// Opcional: Fecha o menu ao clicar em um link (bom para sites de uma página só)
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('open');
+        nav.classList.remove('active');
+    });
 });

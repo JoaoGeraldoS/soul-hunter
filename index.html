@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soul Hunter</title>
     <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="/src/css/responsive.css">
 </head>
 <body>
     <!-- Header -->
@@ -15,6 +16,11 @@
             
                 <span class="logo-text">Soul Hunter</span>
             </div>
+
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="hamburger"></span>
+            </button>
+
             <nav class="nav">
                 <a href="index.html" class="nav-link active">Início</a>
                 <a href="/src/pages/demo.html" class="nav-link">Jogar Demo</a>
@@ -27,9 +33,14 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
-        <img src="./src/img/capa.png" alt="Hero" class="hero-image">
+        <img src="./src/img/testeImg3.png" alt="Hero" class="hero-image">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./src/img/imgPhone.png">
+            
+            <img src="./src/img/testeImg3.png" alt="Hero" class="hero-image">
+        </picture>
         <div class="container hero-content">
-            <h1 class="hero-title">Soul Hunter</h1>
+            <!-- <h1 class="hero-title">Soul Hunter</h1> -->
             <p class="hero-description">
                 Embarque em uma jornada épica através de reinos místicos. Escolha seu destino, 
                 domine habilidades ancestrais e torne-se uma lenda imortal.
@@ -132,7 +143,7 @@
         </div>
     </footer>
 
-    <!-- <script src="script.js"></script> -->
-    <!-- <script src="src/js/teste.js"></script> -->
+    <script src="src/js/script.js"></script>
+    
 </body>
 </html>
