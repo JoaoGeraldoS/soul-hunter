@@ -12,7 +12,7 @@ loginForm.addEventListener("submit", (event) => {
         nick: nickName
     };
 
-    fetch("http://localhost:8080/login", {
+    fetch("https://soul-hunter.onrender.com/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

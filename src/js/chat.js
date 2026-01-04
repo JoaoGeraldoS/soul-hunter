@@ -7,7 +7,7 @@ const nickSalvo = localStorage.getItem("usuarioLogado");
 //     alert("Faça o login")
 // } else {
     // 2. Inicializamos a variável SEM o 'const' aqui dentro
-    socket = new WebSocket(`ws://localhost:8080/chat?id=${nickSalvo}`);
+    socket = new WebSocket(`wss://soul-hunter.onrender.com/chat?id=${nickSalvo}`);
     
     // Configuramos os eventos logo após a criação
     socket.onopen = () => {
