@@ -8,6 +8,7 @@ const nickSalvo = localStorage.getItem("usuarioLogado");
 // } else {
     // 2. Inicializamos a variável SEM o 'const' aqui dentro
     socket = new WebSocket(`wss://soul-hunter.onrender.com/chat?id=${nickSalvo}`);
+    // socket = new WebSocket(`ws://localhost:8080/chat?id=${nickSalvo}`);
     
     // Configuramos os eventos logo após a criação
     socket.onopen = () => {
@@ -48,13 +49,10 @@ function addMessage(user, message, time) {
     `;
 
     chatMessages.appendChild(messageDiv);
-
-    // Scroll automático
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
 function sendMessage() {
-    // Verificamos se o socket está aberto antes de enviar
     if (!socket || socket.readyState !== WebSocket.OPEN) {
         console.error("Socket não está conectado!");
         return;
@@ -75,10 +73,15 @@ function sendMessage() {
     chatInput.value = "";
 }
 
-// Enviar com Enter
+function scrollToBottom() {
+    const chatMessages = document.querySelector('.chat-messages');
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
 function handleChatKeyPress(event) {
     if (event.key === "Enter") {
         sendMessage();
+        scrollToBottom()
     }
 }
 

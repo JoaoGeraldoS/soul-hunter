@@ -1,18 +1,16 @@
-// Seleciona o formulário
 const loginForm = document.getElementById("form-login");
 
 loginForm.addEventListener("submit", (event) => {
-    // Impede a página de recarregar ao clicar no botão
     event.preventDefault();
 
-    // Pega o valor do input dentro do evento (na hora do clique)
     let nickName = document.getElementById("nick").value;
 
     const loginData = {
         nick: nickName
     };
 
-    fetch("https://soul-hunter.onrender.com/login", {
+    let url = "https://soul-hunter.onrender.com/login"
+    fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

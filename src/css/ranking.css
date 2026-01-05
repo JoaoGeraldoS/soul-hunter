@@ -1,5 +1,15 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .table-container {
     overflow-x: auto;
+}
+
+.container {
+    min-width: 1000px;
 }
 
 .ranking-table {
@@ -161,3 +171,57 @@
 .season-reward {
     color: #fbbf24;
 }
+
+#card-ranking {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#busca {
+    display: flex;
+    align-items: center;
+    background-color: #1e293b; 
+    border-radius: 8px; 
+    padding: 2px 12px;
+    border: 1px solid #334155; 
+    transition: all 0.3s ease;
+    width: 350px;
+}
+
+#busca:focus-within {
+    border-color: #60a5fa; 
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+#busca input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    height: 30px; 
+    font-size: 0.875rem;
+    outline: none;
+    color: white; 
+}
+
+#busca input::placeholder {
+    color: #94a3b8;
+}
+
+#busca button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding-left: 8px;
+}
+
+
+#busca button svg {
+    stroke: #94a3b8;
+}
+
+#busca button:hover svg {
+    stroke: #60a5fa;
+}
+
