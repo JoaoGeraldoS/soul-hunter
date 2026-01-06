@@ -1,3 +1,7 @@
+document.querySelector('#busca').addEventListener('click', function() {
+    this.querySelector('input').focus();
+});
+
 let debounceTimer;
 
 const campoBusca = document.getElementById("input-busca");
