@@ -50,7 +50,6 @@ function renderizarTabela(players) {
                 <span class="rank-icon">${index + 1}</span>
             </td>
             <td class="player-name">${element.nick}</td>
-            <td><span class="badge badge-level">${element.level || 0}</span></td>
             <td><span class="badge badge-warrior">${element.classe || 'Arqueira'}</span></td>
             <td class="points">${element.points}</td>  
         `;

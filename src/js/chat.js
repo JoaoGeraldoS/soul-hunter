@@ -2,34 +2,25 @@ let socket;
 
 const nickSalvo = localStorage.getItem("usuarioLogado");
 
-// window.location.href = "login.html"; 
-// if (nickSalvo) {
-//     alert("Faça o login")
-// } else {
-    // 2. Inicializamos a variável SEM o 'const' aqui dentro
-    socket = new WebSocket(`wss://soul-hunter.onrender.com/chat?id=${nickSalvo}`);
-    // socket = new WebSocket(`ws://localhost:8080/chat?id=${nickSalvo}`);
-    
-    // Configuramos os eventos logo após a criação
-    socket.onopen = () => {
-        console.log("Conectado ao servidor como: " + nickSalvo);
-    };
+socket = new WebSocket(`wss://soul-hunter.onrender.com/chat?id=${nickSalvo}`);
 
-    socket.onmessage = (event) => {
-        const data = JSON.parse(event.data);
-        addMessage(data.user, data.message, data.time);
-    };
+socket.onopen = () => {
+    console.log("Conectado ao servidor como: " + nickSalvo);
+};
 
-    socket.onerror = (error) => {
-        console.error("Erro no WebSocket:", error);
-    };
+socket.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    addMessage(data.user, data.message, data.time);
+};
 
-    socket.onclose = () => {
-        console.log("WebSocket fechado");
-    };
-// }
-// Ajuste para o endereço real do seu WebSocket
-// const socket = new WebSocket("ws://localhost:8080/chat");
+socket.onerror = (error) => {
+    console.error("Erro no WebSocket:", error);
+};
+
+socket.onclose = () => {
+    console.log("WebSocket fechado");
+};
+
 
 const chatMessages = document.getElementById("chatMessages");
 const chatInput = document.getElementById("chatInput");

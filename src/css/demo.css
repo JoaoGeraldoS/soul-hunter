@@ -26,68 +26,11 @@
     text-align: center;
 }
 
-.game-emoji {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
 
 .game-label {
     color: #94a3b8;
 }
 
-.game-sublabel {
-    color: #64748b;
-    font-size: 0.875rem;
-    margin-top: 0.5rem;
-}
-
-.game-enemy {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    text-align: center;
-}
-
-.enemy-emoji {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.enemy-badge {
-    background: rgba(127, 29, 29, 0.5);
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
-}
-
-.enemy-badge p {
-    color: #f87171;
-    font-size: 0.875rem;
-    margin: 0;
-}
-
-.game-player {
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    text-align: center;
-}
-
-.player-emoji {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.player-badge {
-    background: rgba(29, 78, 216, 0.5);
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
-}
-
-.player-badge p {
-    color: #60a5fa;
-    font-size: 0.875rem;
-    margin: 0;
-}
 
 /* Stats */
 .stats-grid {
@@ -165,48 +108,6 @@
     font-size: 1.25rem;
 }
 
-/* Action Buttons */
-.action-buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-}
-
-.btn-action {
-    color: white;
-    font-weight: 500;
-}
-
-.btn-attack {
-    background: #b91c1c;
-}
-
-.btn-attack:hover {
-    background: #991b1b;
-}
-
-.btn-defend {
-    background: #1d4ed8;
-}
-
-.btn-defend:hover {
-    background: #1e40af;
-}
-
-.btn-special {
-    background: #7e22ce;
-}
-
-.btn-special:hover {
-    background: #6b21a8;
-}
-
-.btn-special:disabled {
-    background: #4b5563;
-    cursor: not-allowed;
-}
-
 .game-hint {
     color: #94a3b8;
     font-size: 0.875rem;
@@ -215,7 +116,7 @@
 
 /* Chat */
 .chat-card {
-    height: calc(100vh - 12rem);
+    height: calc(100vh - 14rem);
     display: flex;
     flex-direction: column;
     overflow: hidden;

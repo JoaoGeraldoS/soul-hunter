@@ -37,7 +37,7 @@ loginForm.addEventListener("submit", (event) => {
 
         window.location.href = "demo.html"; 
         
-        // 2. Redireciona para a página desejada
+        
     })
     .catch(error => {
         console.error("Erro:", error);
