@@ -1,6 +1,5 @@
 .card{
-    height: auto;
-    
+    height: calc(100vh - 14rem);  
 }
 
 #gameIframe {
