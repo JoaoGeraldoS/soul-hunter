@@ -17,25 +17,19 @@ socket.onmessage = (event) => {
     const data = JSON.parse(event.data);
 
     if (Array.isArray(data)) {
-        // Lógica para o Histórico 
         data.forEach(msg => {
             const msgId = msg.id || msg.ID; 
-            if (msgId) {
-                if (!getMessages.has(msgId)) {
-                    addMessage(msg.user, msg.message, msg.time);
-                    getMessages.add(msgId);
-                }
-            } else {
-                
+            if (msgId && !getMessages.has(msgId)) {
+                addMessage(msg.user, msg.message, msg.time, msgId);
+                getMessages.add(msgId);
+            } else if (!msgId) {
                 addMessage(msg.user, msg.message, msg.time);
             }
         });
     } else {
-        // Lógica para Mensagem Individual 
         const msgId = data.id || data.ID;
-        
         if (!msgId || !getMessages.has(msgId)) {
-            addMessage(data.user, data.message, data.time);
+            addMessage(data.user, data.message, data.time, msgId);
             if (msgId) getMessages.add(msgId);
         }
     }
@@ -52,7 +46,7 @@ socket.onclose = () => {
 // Pega a mensagem do servidor e mostra no chat
 function addMessage(user, message, time, id) {
     
-    const elementId = id ? `msg-${id}` : `msg-${Date.now()}`;
+    const elementId = id ? `msg-${id}` : `msg-${Math.random().toString(36).substr(2, 9)}`;
     
     const messageDiv = document.createElement("div");
     messageDiv.id = elementId; 
@@ -69,16 +63,16 @@ function addMessage(user, message, time, id) {
     chatMessages.appendChild(messageDiv);
     scrollToBottom();
 
-    // Remover a mensagem
+    
     setTimeout(() => {
         const elementToDelete = document.getElementById(elementId);
         if (elementToDelete) {
-            elementToDelete.style.transition = "opacity 0.5s";
-            elementToDelete.style.opacity = "0";
+            elementToDelete.style.opacity = '0';
+            elementToDelete.style.transition = 'opacity 0.5s ease';
             
             setTimeout(() => {
                 elementToDelete.remove();
-                console.log("Mensagem expirada e removida do ecrã.");
+                console.log(`Mensagem ${elementId} removida.`);
             }, 500);
         }
     }, 120000); 
