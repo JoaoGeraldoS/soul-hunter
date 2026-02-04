@@ -253,11 +253,12 @@ body {
 
 .screenshots {
     padding: 5rem 0;
+    
 }
 
 .screenshots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
@@ -268,9 +269,11 @@ body {
 }
 
 .screenshot-image {
+    display: block;
     width: 100%;
-    height: 320px;
+    height: auto;
     object-fit: cover;
+    aspect-ratio: 16/9;
     transition: transform 0.3s;
 }
 

@@ -56,7 +56,10 @@
     .features-grid,
     .screenshots-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
+
+    
     
     .menu-toggle {
         display: block; 
@@ -99,5 +102,15 @@
         font-size: 1.5rem;
     }
 
+    #fullscreenBtn {
+        display: block;
+    }
 
+}
+
+@media (max-width: 480px) {
+    .screenshots-grid {
+        grid-template-columns: 1fr; /* Força uma coluna só */
+        gap: 1rem;
+    }
 }
