@@ -50,8 +50,12 @@ socket.onclose = () => {
 };
 
 // Pega a mensagem do servidor e mostra no chat
-function addMessage(user, message, time) {
+function addMessage(user, message, time, id) {
+    
+    const elementId = id ? `msg-${id}` : `msg-${Date.now()}`;
+    
     const messageDiv = document.createElement("div");
+    messageDiv.id = elementId; 
     messageDiv.classList.add("chat-message");
 
     messageDiv.innerHTML = `
@@ -64,6 +68,20 @@ function addMessage(user, message, time) {
 
     chatMessages.appendChild(messageDiv);
     scrollToBottom();
+
+    // Remover a mensagem
+    setTimeout(() => {
+        const elementToDelete = document.getElementById(elementId);
+        if (elementToDelete) {
+            elementToDelete.style.transition = "opacity 0.5s";
+            elementToDelete.style.opacity = "0";
+            
+            setTimeout(() => {
+                elementToDelete.remove();
+                console.log("Mensagem expirada e removida do ecrã.");
+            }, 500);
+        }
+    }, 120000); 
 }
 
 
