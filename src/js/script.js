@@ -24,3 +24,24 @@ navLinks.forEach(link => {
         nav.classList.remove('active');
     });
 });
+
+function downloadAPK() {
+    const btn = document.querySelector('.btn-primary');
+    const originalText = btn.innerText;
+    
+    btn.innerText = "Iniciando download...";
+    btn.disabled = true; // Evita cliques duplos
+
+    const link = document.createElement('a');
+    link.href = '/Soul-Hunter(att).apk';
+    link.download = 'Soul-Hunter.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Volta o botão ao normal depois de 3 segundos
+    setTimeout(() => {
+        btn.innerText = originalText;
+        btn.disabled = false;
+    }, 3000);
+}
