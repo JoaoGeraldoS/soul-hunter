@@ -134,46 +134,6 @@ body {
     color: #cbd5e1;
 }
 
-/* Season Info */
-.season-info {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background: #1e293b;
-    border-radius: 0.5rem;
-    border: 1px solid #334155;
-}
-
-.season-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-    color: white;
-}
-
-.season-icon {
-    color: #60a5fa;
-}
-
-.season-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    font-size: 0.875rem;
-}
-
-.season-text {
-    color: #94a3b8;
-    margin-top: 0.25rem;
-}
-
-.season-value {
-    color: white;
-}
-
-.season-reward {
-    color: #fbbf24;
-}
 
 #card-ranking {
     display: flex;
