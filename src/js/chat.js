@@ -79,9 +79,12 @@ function addMessage(user, message, time, id) {
 }
 
 const iframe = document.getElementById('gameIframe');
+
 if (window.innerWidth > 1024) { 
-    // Se a tela for grande, carrega a versão PC
-    iframe.src = "../../Soul-Hunter-PC/index.html";
+    // O "/" no início indica que ele parte da pasta principal do site
+    iframe.src = "/Soul-Hunter-PC/index.html";
+} else {
+    iframe.src = "/Soul-Hunter/index.html";
 }
 
 // Envia a mensagem para o servidor
