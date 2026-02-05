@@ -82,7 +82,7 @@ const iframe = document.getElementById('gameIframe');
 
 if (window.innerWidth > 1024) { 
     // O "/" no início indica que ele parte da pasta principal do site
-    iframe.src = "/Soul-Hunter-PC/index.html";
+    iframe.src = "/Soul-Hunter-PC/jogo.html";
 } else {
     iframe.src = "/Soul-Hunter/index.html";
 }
